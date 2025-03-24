@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-24T15:56:09.463860" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\Users\vijaybh\PycharmProjects\PythonProject\UI_Tests\LoginTest.robot">
+<test id="s1-t1" name="Validate login with valid username and password" line="17">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Hello World</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-24T15:56:10.234006" elapsed="0.000832"/>
+</kw>
+<kw name="open the browser and hit the url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-24T15:56:10.237882" level="INFO">Creating an instance of the chrome WebDriver.</msg>
+<msg time="2025-03-24T15:56:10.238168" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-03-24T15:56:10.238659" level="FAIL">TypeError: 'module' object is not callable</msg>
+<arg>chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-03-24T15:56:10.236457" elapsed="0.008198">TypeError: 'module' object is not callable</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-03-24T15:56:10.245241" elapsed="0.000118"/>
+</kw>
+<status status="FAIL" start="2025-03-24T15:56:10.235848" elapsed="0.010505">TypeError: 'module' object is not callable</status>
+</kw>
+<kw name="fill the login form">
+<status status="NOT RUN" start="2025-03-24T15:56:10.248229" elapsed="0.000162"/>
+</kw>
+<status status="FAIL" start="2025-03-24T15:56:10.231743" elapsed="0.017659">TypeError: 'module' object is not callable</status>
+</test>
+<doc>This test is to validate login page</doc>
+<status status="FAIL" start="2025-03-24T15:56:09.468104" elapsed="0.786024"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTest" id="s1" pass="0" fail="1" skip="0">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

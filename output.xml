@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-24T16:24:38.699226" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\Users\vijaybh\PycharmProjects\PythonProject\UI_Tests\LoginTest.robot">
+<test id="s1-t1" name="Validate login with valid username and password" line="7">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Hello World</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-24T16:24:39.444576" elapsed="0.000648"/>
+</kw>
+<kw name="open the browser and hit the url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-24T16:24:39.446987" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-03-24T16:24:39.446728" elapsed="2.374283"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-24T16:24:41.822472" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-24T16:24:41.821841" elapsed="8.722182"/>
+</kw>
+<status status="PASS" start="2025-03-24T16:24:39.446144" elapsed="11.098644"/>
+</kw>
+<kw name="fill the login form">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@placeholder='Username']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-24T16:24:50.547420" elapsed="2.501344"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-24T16:24:53.050290" level="INFO">Typing text 'Admin' into text field 'xpath://input[@placeholder='Username']'.</msg>
+<arg>xpath://input[@placeholder='Username']</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-24T16:24:53.049404" elapsed="0.320931"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@placeholder='Password']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-24T16:24:53.371083" elapsed="0.069411"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-24T16:24:53.441927" level="INFO">Typing text 'admin1234' into text field 'xpath://input[@placeholder='Password']'.</msg>
+<arg>xpath://input[@placeholder='Password']</arg>
+<arg>admin1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-24T16:24:53.441191" elapsed="0.412052"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-24T16:24:53.854687" level="INFO">Clicking button 'xpath://button[normalize-space()='Login']'.</msg>
+<arg>xpath://button[normalize-space()='Login']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-24T16:24:53.853991" elapsed="0.425809"/>
+</kw>
+<status status="PASS" start="2025-03-24T16:24:50.546171" elapsed="3.734490"/>
+</kw>
+<status status="PASS" start="2025-03-24T16:24:39.441895" elapsed="14.840174"/>
+</test>
+<doc>This test is to validate login page</doc>
+<status status="PASS" start="2025-03-24T16:24:38.703644" elapsed="15.581933"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTest" id="s1" pass="1" fail="0" skip="0">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
