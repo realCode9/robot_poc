@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-09T15:19:22.158370" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\Users\vijaybh\PycharmProjects\PythonProject\UI_Tests\LoginTest.robot">
+<test id="s1-t1" name="Validate unsuccessful login" line="17">
+<kw name="open the browser and hit the url" owner="common-resources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:23.440764" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-04-09T15:19:23.440220" elapsed="5.953272"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:29.395672" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-09T15:19:29.394546" elapsed="0.504348"/>
+</kw>
+<status status="PASS" start="2025-04-09T15:19:23.437998" elapsed="6.461665"/>
+</kw>
+<kw name="Fill in the login form" owner="common-resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${password_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T15:19:29.903494" elapsed="1.507871"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:31.413663" level="INFO">Typing text 'rahulshettyacademy' into text field 'xpath://input[@id='username']'.</msg>
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:31.412305" elapsed="2.162737"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:33.577585" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-09T15:19:34.619421" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:33.576035" elapsed="1.984575"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:35.563295" level="INFO">Clicking button 'xpath://input[@id='signInBtn']'.</msg>
+<arg>${login_button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:35.561835" elapsed="0.818314"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password_invalid}</arg>
+<status status="PASS" start="2025-04-09T15:19:29.900921" elapsed="6.484564"/>
+</kw>
+<kw name="validate incorrect login attempt" owner="login-page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${error_msg_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T15:19:36.389637" elapsed="2.246801"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:38.639026" level="INFO">Verifying element 'css:.alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${error_msg_locator}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-04-09T15:19:38.637702" elapsed="0.101473"/>
+</kw>
+<status status="PASS" start="2025-04-09T15:19:36.387517" elapsed="2.352197"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-09T15:19:38.741148" level="INFO">Unsuccessful login test successful</msg>
+<arg>Unsuccessful login test successful</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-09T15:19:38.740413" elapsed="0.000970"/>
+</kw>
+<status status="PASS" start="2025-04-09T15:19:23.435798" elapsed="15.306250"/>
+</test>
+<doc>This test is to validate login page</doc>
+<status status="PASS" start="2025-04-09T15:19:22.232512" elapsed="16.512151"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTest" id="s1" pass="1" fail="0" skip="0">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

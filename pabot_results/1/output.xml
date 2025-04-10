@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-09T15:19:22.161812" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\Users\vijaybh\PycharmProjects\PythonProject\UI_Tests\LoginTest.robot">
+<test id="s1-t1" name="Validate successful login" line="22">
+<kw name="open the browser and hit the url" owner="common-resources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:23.441183" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-04-09T15:19:23.440390" elapsed="5.730960"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:29.175472" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-09T15:19:29.173464" elapsed="5.169454"/>
+</kw>
+<status status="PASS" start="2025-04-09T15:19:23.436907" elapsed="10.906767"/>
+</kw>
+<kw name="Fill in the login form" owner="common-resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${password_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T15:19:34.348610" elapsed="0.142046"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:34.492860" level="INFO">Typing text 'rahulshettyacademy' into text field 'xpath://input[@id='username']'.</msg>
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:34.491513" elapsed="1.464234"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:35.958224" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-09T15:19:36.713019" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:35.956573" elapsed="1.302108"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:37.261594" level="INFO">Clicking button 'xpath://input[@id='signInBtn']'.</msg>
+<arg>${login_button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:37.259890" elapsed="0.764131"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-04-09T15:19:34.344826" elapsed="3.679971"/>
+</kw>
+<kw name="Wait until locator element is visible" owner="common-resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:44.629346" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-09T15:19:44.630438" level="FAIL">Element '//a[normalize-space()='ProtoCommerce Home']' not visible after 5 seconds.</msg>
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-04-09T15:19:38.027836" elapsed="7.292859">Element '//a[normalize-space()='ProtoCommerce Home']' not visible after 5 seconds.</status>
+</kw>
+<arg>${dashboard_title_locator}</arg>
+<status status="FAIL" start="2025-04-09T15:19:38.025936" elapsed="7.296180">Element '//a[normalize-space()='ProtoCommerce Home']' not visible after 5 seconds.</status>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${dashboard_title_locator}</arg>
+<arg>ProtoCommerce Home</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2025-04-09T15:19:45.322879" elapsed="0.000339"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Login Successful</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-04-09T15:19:45.323797" elapsed="0.000402"/>
+</kw>
+<status status="FAIL" start="2025-04-09T15:19:23.434415" elapsed="21.890564">Element '//a[normalize-space()='ProtoCommerce Home']' not visible after 5 seconds.</status>
+</test>
+<doc>This test is to validate login page</doc>
+<status status="FAIL" start="2025-04-09T15:19:22.231013" elapsed="23.127106"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTest" id="s1" pass="0" fail="1" skip="0">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

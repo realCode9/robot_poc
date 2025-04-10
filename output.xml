@@ -1,64 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-24T16:24:38.699226" rpa="false" schemaversion="5">
-<suite id="s1" name="LoginTest" source="C:\Users\vijaybh\PycharmProjects\PythonProject\UI_Tests\LoginTest.robot">
-<test id="s1-t1" name="Validate login with valid username and password" line="7">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Hello World</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-03-24T16:24:39.444576" elapsed="0.000648"/>
-</kw>
-<kw name="open the browser and hit the url">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-10T14:27:31.272510" rpa="false" schemaversion="5">
+<suite id="s1" name="Using Custom Library" source="C:\Users\vijaybh\PycharmProjects\PythonProject\UI_Tests\Using_Custom_Library.robot">
+<test id="s1-t1" name="Using custom libraries created in shop library" line="18">
+<kw name="open the browser and hit the url" owner="common-resources" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-03-24T16:24:39.446987" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>Chrome</arg>
+<msg time="2025-04-10T14:27:31.626619" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser_name}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-03-24T16:24:39.446728" elapsed="2.374283"/>
+<status status="PASS" start="2025-04-10T14:27:31.626458" elapsed="6.000395"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-03-24T16:24:41.822472" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
-<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<msg time="2025-04-10T14:27:37.627512" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-03-24T16:24:41.821841" elapsed="8.722182"/>
+<status status="PASS" start="2025-04-10T14:27:37.627221" elapsed="5.003612"/>
 </kw>
-<status status="PASS" start="2025-03-24T16:24:39.446144" elapsed="11.098644"/>
+<status status="PASS" start="2025-04-10T14:27:31.625873" elapsed="11.005156"/>
 </kw>
-<kw name="fill the login form">
+<kw name="Fill in the login form" owner="common-resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath://input[@placeholder='Username']</arg>
+<arg>${password_locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T16:24:50.547420" elapsed="2.501344"/>
+<status status="PASS" start="2025-04-10T14:27:42.631992" elapsed="0.030088"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T16:24:53.050290" level="INFO">Typing text 'Admin' into text field 'xpath://input[@placeholder='Username']'.</msg>
-<arg>xpath://input[@placeholder='Username']</arg>
-<arg>Admin</arg>
+<msg time="2025-04-10T14:27:42.662709" level="INFO">Typing text 'rahulshettyacademy' into text field 'xpath://input[@id='username']'.</msg>
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T16:24:53.049404" elapsed="0.320931"/>
+<status status="PASS" start="2025-04-10T14:27:42.662281" elapsed="0.100959"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath://input[@placeholder='Password']</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T16:24:53.371083" elapsed="0.069411"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T16:24:53.441927" level="INFO">Typing text 'admin1234' into text field 'xpath://input[@placeholder='Password']'.</msg>
-<arg>xpath://input[@placeholder='Password']</arg>
-<arg>admin1234</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T16:24:53.441191" elapsed="0.412052"/>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-04-10T14:27:42.763955" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-10T14:27:42.769599" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-10T14:27:42.763562" elapsed="0.022335"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T16:24:53.854687" level="INFO">Clicking button 'xpath://button[normalize-space()='Login']'.</msg>
-<arg>xpath://button[normalize-space()='Login']</arg>
+<msg time="2025-04-10T14:27:42.786473" level="INFO">Clicking button 'xpath://input[@id='signInBtn']'.</msg>
+<arg>${login_button_locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T16:24:53.853991" elapsed="0.425809"/>
+<status status="PASS" start="2025-04-10T14:27:42.786178" elapsed="0.232167"/>
 </kw>
-<status status="PASS" start="2025-03-24T16:24:50.546171" elapsed="3.734490"/>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-04-10T14:27:42.631518" elapsed="0.387025"/>
 </kw>
-<status status="PASS" start="2025-03-24T16:24:39.441895" elapsed="14.840174"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-10T14:27:48.019616" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-10T14:27:43.019023" elapsed="5.000757"/>
+</kw>
+<kw name="Wait until locator element is visible" owner="common-resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-10T14:27:48.020747" elapsed="0.015798"/>
+</kw>
+<arg>${dashboard_title_locator}</arg>
+<status status="PASS" start="2025-04-10T14:27:48.020423" elapsed="0.016275"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-10T14:27:48.037343" level="INFO">Verifying element '//a[normalize-space()='ProtoCommerce Home']' contains exact text 'ProtoCommerce Home'.</msg>
+<arg>${dashboard_title_locator}</arg>
+<arg>ProtoCommerce Home</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-04-10T14:27:48.037120" elapsed="0.014407"/>
+</kw>
+<kw name="Add Items To Cart" owner="Shop">
+<msg time="2025-04-10T14:27:48.097957" level="INFO">Clicking button 'xpath:(//div[@class='card-footer']/button)[3]'.</msg>
+<msg time="2025-04-10T14:27:48.343852" level="INFO">Clicking button 'xpath:(//div[@class='card-footer']/button)[4]'.</msg>
+<msg time="2025-04-10T14:27:48.566223" level="INFO">Clicking link 'css:li.active a'.</msg>
+<arg>${listOfProducts}</arg>
+<status status="PASS" start="2025-04-10T14:27:48.051925" elapsed="0.735869"/>
+</kw>
+<kw name="Wait until button visible and click button" owner="common-resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-10T14:27:48.788933" elapsed="0.014452"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-10T14:27:48.803978" level="INFO">Clicking button 'css:.btn-success'.</msg>
+<arg>${button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-10T14:27:48.803647" elapsed="0.233424"/>
+</kw>
+<arg>${checkout_button_locator}</arg>
+<status status="PASS" start="2025-04-10T14:27:48.788415" elapsed="0.248851"/>
+</kw>
+<kw name="Add input to the field" owner="common-resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${input_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-10T14:27:49.037956" elapsed="0.012208"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-10T14:27:49.050702" level="INFO">Typing text 'India' into text field 'country'.</msg>
+<arg>${input_locator}</arg>
+<arg>${input_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-10T14:27:49.050401" elapsed="0.029483"/>
+</kw>
+<arg>${country_input_locator}</arg>
+<arg>${country_value}</arg>
+<status status="PASS" start="2025-04-10T14:27:49.037651" elapsed="0.042379"/>
+</kw>
+<kw name="Wait and click the link" owner="confirmation-page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-10T14:27:52.081276" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-10T14:27:49.080656" elapsed="3.000827"/>
+</kw>
+<kw name="Wait until link visible and click link" owner="common-resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-10T14:27:52.082233" elapsed="2.265527"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-10T14:27:54.348262" level="INFO">Clicking link 'xpath://a[text()='India']'.</msg>
+<arg>${element_locator}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-10T14:27:54.347993" elapsed="0.217099"/>
+</kw>
+<arg>xpath://a[text()='${country_value}']</arg>
+<status status="PASS" start="2025-04-10T14:27:52.081763" elapsed="2.483483"/>
+</kw>
+<status status="PASS" start="2025-04-10T14:27:49.080422" elapsed="5.484894"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-10T14:27:59.566938" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-10T14:27:54.566018" elapsed="5.001108"/>
+</kw>
+<kw name="Wait until button visible and click button" owner="common-resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-10T14:27:59.568002" elapsed="0.017193"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-10T14:27:59.585717" level="INFO">Clicking button 'css:.btn-success'.</msg>
+<arg>${button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-10T14:27:59.585432" elapsed="0.225101"/>
+</kw>
+<arg>${purchase_button}</arg>
+<status status="PASS" start="2025-04-10T14:27:59.567680" elapsed="0.243556"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-10T14:27:59.827975" level="INFO">Current page contains text 'Success! Thank you!'.</msg>
+<arg>Success! Thank you!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-10T14:27:59.812033" elapsed="0.016091"/>
+</kw>
+<status status="PASS" start="2025-04-10T14:27:31.624847" elapsed="28.203720"/>
 </test>
-<doc>This test is to validate login page</doc>
-<status status="PASS" start="2025-03-24T16:24:38.703644" elapsed="15.581933"/>
+<status status="PASS" start="2025-04-10T14:27:31.274450" elapsed="28.555254"/>
 </suite>
 <statistics>
 <total>
@@ -67,7 +171,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="LoginTest" id="s1" pass="1" fail="0" skip="0">LoginTest</stat>
+<stat name="Using Custom Library" id="s1" pass="1" fail="0" skip="0">Using Custom Library</stat>
 </suite>
 </statistics>
 <errors>
