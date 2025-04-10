@@ -1,0 +1,24 @@
+==============================================================================
+LoginTest :: This test is to validate login page                              
+==============================================================================
+Validate successful login                                               
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\vijaybh\PycharmProjects\PythonProject\UI_Tests\LoginTest.robot:22
+    T:  Validate successful login    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\vijaybh\PycharmProjects\PythonProject\UI_Tests\LoginTest.robot:24
+      Wait until locator element is visible    ${dashboard_title_locator}
+      |  ${dashboard_title_locator} = //a[normalize-space()='ProtoCommerce Home'] (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\vijaybh\PycharmProjects\PythonProject\resources\common-resources.robot:21
+      Wait Until Element Is Visible    ${element}
+      |  ${element} = //a[normalize-space()='ProtoCommerce Home'] (str)
+______________________________________________________________________________
+| FAIL |
+Element '//a[normalize-space()='ProtoCommerce Home']' not visible after 5 seconds.
+------------------------------------------------------------------------------
+LoginTest :: This test is to validate login page                      | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\vijaybh\PycharmProjects\PythonProject\pabot_results\1\output.xml

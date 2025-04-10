@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-09T15:19:22.201496" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\Users\vijaybh\PycharmProjects\PythonProject\UI_Tests\LoginTest.robot">
+<test id="s1-t1" name="Select the form and navigate to child window" line="36">
+<kw name="open the browser and hit the url" owner="common-resources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:23.440053" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-04-09T15:19:23.439348" elapsed="6.889261"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:30.331297" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-09T15:19:30.329904" elapsed="1.861009"/>
+</kw>
+<status status="PASS" start="2025-04-09T15:19:23.436104" elapsed="8.755497"/>
+</kw>
+<kw name="Fill the login details and select the user option" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T15:19:32.194487" elapsed="0.409576"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:32.606360" level="INFO">Typing text 'rahulshettyacademy' into text field 'xpath://input[@id='username']'.</msg>
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:32.605017" elapsed="2.673821"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:35.286193" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-09T15:19:35.712263" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:35.279653" elapsed="1.439015"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:36.721982" level="INFO">Clicking element 'xpath://input[@value='user']'.</msg>
+<arg>xpath://input[@value='user']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:36.720135" elapsed="0.791958"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:37.519339" level="INFO">Selecting options from selection list 'xpath://select[@class='form-control']' by value teach.</msg>
+<arg>xpath://select[@class='form-control']</arg>
+<arg>teach</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-04-09T15:19:37.513316" elapsed="0.689715"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>okayBtn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T15:19:38.204579" elapsed="0.272803"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:38.479421" level="INFO">Clicking element 'okayBtn'.</msg>
+<arg>okayBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:38.478418" elapsed="0.377882"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:38.859071" level="INFO">Selecting checkbox 'terms'.</msg>
+<arg>terms</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:38.857516" elapsed="2.719642"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:41.579992" level="INFO">Verifying checkbox 'terms' is selected.</msg>
+<arg>terms</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2025-04-09T15:19:41.578453" elapsed="0.991132"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:42.573121" level="INFO">Clicking button 'xpath://input[@id='signInBtn']'.</msg>
+<arg>${login_button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-09T15:19:42.571121" elapsed="4.684274"/>
+</kw>
+<status status="PASS" start="2025-04-09T15:19:32.192653" elapsed="15.063984"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dashboard_title_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-09T15:19:47.258619" elapsed="3.773973"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-09T15:19:51.035449" level="INFO">Verifying element '//a[normalize-space()='ProtoCommerce Home']' contains exact text 'ProtoCommerce Home'.</msg>
+<arg>${dashboard_title_locator}</arg>
+<arg>ProtoCommerce Home</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-04-09T15:19:51.033494" elapsed="0.156152"/>
+</kw>
+<kw name="Test Teardown" owner="resources">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-09T15:19:51.192996" elapsed="5.935650"/>
+</kw>
+<status status="PASS" start="2025-04-09T15:19:51.190894" elapsed="5.938493"/>
+</kw>
+<status status="PASS" start="2025-04-09T15:19:23.434173" elapsed="33.695933"/>
+</test>
+<doc>This test is to validate login page</doc>
+<status status="PASS" start="2025-04-09T15:19:22.278233" elapsed="34.854199"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTest" id="s1" pass="1" fail="0" skip="0">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

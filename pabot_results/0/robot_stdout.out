@@ -1,0 +1,9 @@
+==============================================================================
+LoginTest :: This test is to validate login page                              
+==============================================================================
+Validate unsuccessful login                                           | PASS |
+------------------------------------------------------------------------------
+LoginTest :: This test is to validate login page                      | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\vijaybh\PycharmProjects\PythonProject\pabot_results\0\output.xml
